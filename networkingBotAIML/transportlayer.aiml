@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+		    <topic name="transportLayer">
+        
+        <category>
+            <pattern>learn</pattern>
+            <template>you can learn about this things of Transport Layer:
+            <ul>
+                <li>How big Transport Layer is</li>
+                <li>The most important subcategory of Transport Layer</li>
+                <li>What this Transport Layer about</li>
+            </ul>
+            Choose!
+            <learn>
+                <category>
+                    <pattern>How big Transport Layer is</pattern>
+                    <template>It has 4 subcategories</template>
+                </category>
+                <category>
+                    <pattern>The most important subcategory of Transport Layer</pattern>
+                    <template>Addressing</template>
+                </category>
+                <category>
+                    <pattern>What this Transport Layer about</pattern>
+                    <template>The main role of the transport layer is to provide the communication services directly to the application processes running on different hosts.
+                    </template>
+                </category>
+            </learn>   
+            </template>
+        </category>
+        
+            <category>
+                <pattern>Transport Layer</pattern>
+                <template>
+                <get name="username"></get>, what subcategory of Transport Layer do you want?
+                <button>
+                    <text>End-to-end delivery</text>
+                    <postback>Endtoend delivery</postback>
+                </button>
+                <button>
+                    <text>Addressing</text>
+                    <postback>Addressing</postback>
+                </button>
+                <button>
+                    <text>Reliable delivery</text>
+                    <postback>Reliable delivery</postback>
+                </button>
+                <button>
+                    <text>Multiplexing</text>
+                    <postback>Multiplexing</postback>
+                </button>
+                <button>
+                    <text>Try new category of networking</text>
+                    <postback>newnet</postback>
+                </button>
+                </template>
+            </category>
+            
+                    <category>
+            <pattern>^ <set>reset</set> ^</pattern>
+            <template>
+                <think><set name="topic">*</set></think>
+                Start a new chat with a "hello".
+            </template>
+        </category>
+        
+         <category>
+            <pattern>newnet</pattern>
+            <template>
+                <think><set name="topic">intro</set></think>
+                Lets try a new category!
+                <button>
+                    <text>Computer Network</text>
+                    <postback>Computer Network</postback>
+                </button>
+                <button>
+                    <text>Models</text>
+                    <postback>Models</postback>
+                </button>
+                <button>
+                    <text>Data Link layer</text>
+                    <postback>Data Link layer</postback>
+                </button>
+                <button>
+                    <text>Network Layer</text>
+                    <postback>Network Layer</postback>
+                </button>
+                <button>
+                    <text>Routing Algorithm</text>
+                    <postback>Routing Algorithm</postback>
+                </button>
+                <button>
+                    <text>Transport Layer</text>
+                    <postback>Transport Layer</postback>
+                </button>
+                <button>
+                    <text>Application Layer</text>
+                    <postback>Application Layer</postback>
+                </button>
+                <button>
+                    <text>Application Protocols</text>
+                    <postback>Application Protocols</postback>
+                </button>
+                <button>
+                    <text>Computer Network Security</text>
+                    <postback>Computer Network Security</postback>
+                </button>
+            </template>
+        </category>
+        
+    <category>
+        <pattern>^ <set>changecat</set> ^</pattern>
+        <template><srai>newnet</srai></template>
+    </category>
+        
+        <category>
+            <pattern>Endtoend delivery</pattern>
+            <template>The transport layer transmits the entire message to the destination. Therefore, it ensures the end-to-end delivery of an entire message from a source to the destination.
+                                <delay>2</delay>
+                  <button>
+                      <text>Learn more about Transport Layer</text>
+                      <postback>Transport Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Addressing</pattern>
+            <template>According to the layered model, the transport layer interacts with the functions of the session layer. Many protocols combine session, presentation, and application layer protocols into a single layer known as the application layer. In these cases, delivery to the session layer means the delivery to the application layer. Data generated by an application on one machine must be transmitted to the correct application on another machine. In this case, addressing is provided by the transport layer.
+The transport layer provides the user address which is specified as a station or port. The port variable represents a particular TS user of a specified station known as a Transport Service access point (TSAP). Each station has only one transport entity.
+The transport layer protocols need to know which upper-layer protocols are communicating.
+                                <delay>2</delay>
+                  <button>
+                      <text>Learn more about Transport Layer</text>
+                      <postback>Transport Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        
+        <category>
+            <pattern>Multiplexing</pattern>
+            <template>The transport layer uses the multiplexing to improve transmission efficiency.
+
+Multiplexing can occur in two ways:
+
+Upward multiplexing: Upward multiplexing means multiple transport layer connections use the same network connection. To make more cost-effective, the transport layer sends several transmissions bound for the same destination along the same path; this is achieved through upward multiplexing. 
+
+Downward multiplexing: Downward multiplexing means one transport layer connection uses the multiple network connections. Downward multiplexing allows the transport layer to split a connection among several paths to improve the throughput. This type of multiplexing is used when networks have a low or slow capacity.
+                                <delay>2</delay>
+                  <button>
+                      <text>Learn more about Transport Layer</text>
+                      <postback>Transport Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        
+        <category>
+            <pattern>Reliable delivery</pattern>
+            <template>What do you want to learn from reliable delivery?
+                <button>
+                    <text>Error control</text>
+                    <postback>Error control</postback>
+                </button>
+                <button>
+                    <text>Sequence control</text>
+                    <postback>Sequence control</postback>
+                </button>
+                <button>
+                    <text>Loss control</text>
+                    <postback>Loss control</postback>
+                </button>
+                <button>
+                    <text>Duplication control</text>
+                    <postback>Duplication control</postback>
+                </button>
+                <button>
+                    <text>Back</text>
+                    <postback>Transport Layer</postback>
+                </button>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Error control</pattern>
+            <template>The primary role of reliability is Error Control. In reality, no transmission will be 100 percent error-free delivery. Therefore, transport layer protocols are designed to provide error-free transmission.
+The data link layer also provides the error handling mechanism, but it ensures only node-to-node error-free delivery. However, node-to-node reliability does not ensure the end-to-end reliability.
+The data link layer checks for the error between each network. If an error is introduced inside one of the routers, then this error will not be caught by the data link layer. It only detects those errors that have been introduced between the beginning and end of the link. Therefore, the transport layer performs the checking for the errors end-to-end to ensure that the packet has arrived correctly.
+                    <delay>2</delay>
+                    <button>
+                      <text>Learn more about Reliable delivery</text>
+                      <postback>Reliable delivery</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Transport Layer</text>
+                      <postback>Transport Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        <category>
+            <pattern>Sequence control</pattern>
+            <template>The second aspect of the reliability is sequence control which is implemented at the transport layer.
+On the sending end, the transport layer is responsible for ensuring that the packets received from the upper layers can be used by the lower layers. On the receiving end, it ensures that the various segments of a transmission can be correctly reassembled.
+                    <delay>2</delay>
+                    <button>
+                      <text>Learn more about Reliable delivery</text>
+                      <postback>Reliable delivery</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Transport Layer</text>
+                      <postback>Transport Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        <category>
+            <pattern>Loss control</pattern>
+            <template>Loss Control is a third aspect of reliability. The transport layer ensures that all the fragments of a transmission arrive at the destination, not some of them. On the sending end, all the fragments of transmission are given sequence numbers by a transport layer. These sequence numbers allow the receiver?s transport layer to identify the missing segment.
+                                <delay>2</delay>
+                    <button>
+                      <text>Learn more about Reliable delivery</text>
+                      <postback>Reliable delivery</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Transport Layer</text>
+                      <postback>Transport Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Duplication control</pattern>
+            <template>Duplication Control is the fourth aspect of reliability. The transport layer guarantees that no duplicate data arrive at the destination. Sequence numbers are used to identify the lost packets; similarly, it allows the receiver to identify and discard duplicate segments.
+                                <delay>2</delay>
+                    <button>
+                      <text>Learn more about Reliable delivery</text>
+                      <postback>Reliable delivery</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Transport Layer</text>
+                      <postback>Transport Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        
+        
+        
+    </topic>
+</aiml>

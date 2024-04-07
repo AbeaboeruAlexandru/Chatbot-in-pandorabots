@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <topic name="computernetworksecurity">
+        
+        <category>
+            <pattern>learn</pattern>
+            <template>you can learn about this things of Computer Network Security:
+            <ul>
+                <li>How big Computer Network Security is</li>
+                <li>The most important subcategory of Computer Network Security</li>
+                <li>What this Computer Network Security about</li>
+            </ul>
+            Choose!
+            <learn>
+                <category>
+                    <pattern>How big Computer Network Security is</pattern>
+                    <template>It has 3 subcategories</template>
+                </category>
+                <category>
+                    <pattern>The most important subcategory of Computer Network Security</pattern>
+                    <template>Security</template>
+                </category>
+                <category>
+                    <pattern>What this Computer Network Security about</pattern>
+                    <template>Computer network security consists of measures taken by business or some organizations to monitor and prevent unauthorized access from the outside attackers
+                    </template>
+                </category>
+            </learn>   
+            </template>
+        </category>
+        
+            <category>
+                <pattern>Computer Network Security</pattern>
+                <template>
+                <get name="username"></get>, what subcategory of Computer Network Security do you want?
+                <button>
+                    <text>Security</text>
+                    <postback>Security</postback>
+                </button>
+                <button>
+                    <text>Privacy</text>
+                    <postback>Privacy</postback>
+                </button>
+                <button>
+                    <text>Digital Signature</text>
+                    <postback>Digital Signature</postback>
+                </button>
+                <button>
+                    <text>Try new category of networking</text>
+                    <postback>newnet</postback>
+                </button>
+                </template>
+            </category>
+            
+                    <category>
+            <pattern>^ <set>reset</set> ^</pattern>
+            <template>
+                <think><set name="topic">*</set></think>
+                Start a new chat with a "hello".
+            </template>
+        </category>
+            
+            <category>
+            <pattern>newnet</pattern>
+            <template>
+                <think><set name="topic">intro</set></think>
+                Lets try a new category!
+                <button>
+                    <text>Computer Network</text>
+                    <postback>Computer Network</postback>
+                </button>
+                <button>
+                    <text>Models</text>
+                    <postback>Models</postback>
+                </button>
+                <button>
+                    <text>Data Link layer</text>
+                    <postback>Data Link layer</postback>
+                </button>
+                <button>
+                    <text>Network Layer</text>
+                    <postback>Network Layer</postback>
+                </button>
+                <button>
+                    <text>Routing Algorithm</text>
+                    <postback>Routing Algorithm</postback>
+                </button>
+                <button>
+                    <text>Transport Layer</text>
+                    <postback>Transport Layer</postback>
+                </button>
+                <button>
+                    <text>Application Layer</text>
+                    <postback>Application Layer</postback>
+                </button>
+                <button>
+                    <text>Application Protocols</text>
+                    <postback>Application Protocols</postback>
+                </button>
+                <button>
+                    <text>Computer Network Security</text>
+                    <postback>Computer Network Security</postback>
+                </button>
+            </template>
+        </category>
+        
+    <category>
+        <pattern>^ <set>changecat</set> ^</pattern>
+        <template><srai>newnet</srai></template>
+    </category>
+
+        <category>
+            <pattern>Security</pattern>
+            <template>What do you want to learn about Security?
+                <button>
+                    <text>Security Privacy</text>
+                    <postback>Security Privacy</postback>
+                </button>
+                <button>
+                    <text>Security Message Integrity</text>
+                    <postback>Security Message Integrity</postback>
+                </button>
+                <button>
+                    <text>End-point authentication</text>
+                    <postback>Endpoint authentication</postback>
+                </button>
+                <button>
+                    <text>Security Non-Repudiation</text>
+                    <postback>Security NonRepudiation</postback>
+                </button>
+                <button>
+                    <text>Back</text>
+                    <postback>Computer Network Security</postback>
+                </button>
+            </template>
+        </category>
+        
+        
+        <category>
+            <pattern>Security Privacy</pattern>
+            <template>Privacy means both the sender and the receiver expects confidentiality. The transmitted message should be sent only to the intended receiver while the message should be opaque for other users. Only the sender and receiver should be able to understand the transmitted message as eavesdroppers can intercept the message. Therefore, there is a requirement to encrypt the message so that the message cannot be intercepted. This aspect of confidentiality is commonly used to achieve secure communication.
+                      <delay>2</delay>
+                    <button>
+                      <text>Learn more about Security</text>
+                      <postback>Security</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Computer Network Security</text>
+                      <postback>Computer Network Security</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Security Message Integrity</pattern>
+            <template>Data integrity means that the data must arrive at the receiver exactly as it was sent. There must be no changes in the data content during transmission, either maliciously or accident, in a transit. As there are more and more monetary exchanges over the internet, data integrity is more crucial. The data integrity must be preserved for secure communication.
+                                  <delay>2</delay>
+                    <button>
+                      <text>Learn more about Security</text>
+                      <postback>Security</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Computer Network Security</text>
+                      <postback>Computer Network Security</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Endpoint authentication</pattern>
+            <template>Authentication means that the receiver is sure of the sender?s identity, i.e., no imposter has sent the message.
+                                  <delay>2</delay>
+                    <button>
+                      <text>Learn more about Security</text>
+                      <postback>Security</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Computer Network Security</text>
+                      <postback>Computer Network Security</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Security NonRepudiation</pattern>
+            <template>Non-Repudiation means that the receiver must be able to prove that the received message has come from a specific sender. The sender must not deny sending a message that he or she send. The burden of proving the identity comes on the receiver. For example, if a customer sends a request to transfer the money from one account to another account, then the bank must have a proof that the customer has requested for the transaction.
+                                  <delay>2</delay>
+                    <button>
+                      <text>Learn more about Security</text>
+                      <postback>Security</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Computer Network Security</text>
+                      <postback>Computer Network Security</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        
+        
+        <category>
+            <pattern>Privacy</pattern>
+            <template>What do you want to learn about Privacy?
+                <button>
+                    <text>Encryption</text>
+                    <postback>Encryption</postback>
+                </button>
+                <button>
+                    <text>Decryption</text>
+                    <postback>Decryption</postback>
+                </button>
+                <button>
+                    <text>Back</text>
+                    <postback>Computer Network Security</postback>
+                </button>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Encryption</pattern>
+            <template>Encryption means that the sender converts the original information into another form and sends the unintelligible message over the network.
+                                              <delay>2</delay>
+                    <button>
+                      <text>Learn more about Privacy</text>
+                      <postback>Privacy</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Computer Network Security</text>
+                      <postback>Computer Network Security</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Decryption</pattern>
+            <template>Decryption reverses the Encryption process in order to transform the message back to the original form.
+                                                          <delay>2</delay>
+                    <button>
+                      <text>Learn more about Privacy</text>
+                      <postback>Privacy</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Computer Network Security</text>
+                      <postback>Computer Network Security</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        
+        
+        <category>
+            <pattern>Digital Signature</pattern>
+            <template>What do you want to learn about Digital Signature?
+                <button>
+                    <text>Message Integrity</text>
+                    <postback>Message Integrity</postback>
+                </button>
+                <button>
+                    <text>Authentication</text>
+                    <postback>Authentication</postback>
+                </button>
+                <button>
+                    <text>Non-Repudiation</text>
+                    <postback>Non-Repudiation</postback>
+                </button>
+                <button>
+                    <text>Back</text>
+                    <postback>Computer Network Security</postback>
+                </button>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Message Integrity</pattern>
+            <template>Data integrity means that the data must arrive at the receiver exactly as it was sent. There must be no changes in the data content during transmission, either maliciously or accident, in a transit. As there are more and more monetary exchanges over the internet, data integrity is more crucial. The data integrity must be preserved for secure communication.
+                                                                      <delay>2</delay>
+                    <button>
+                      <text>Learn more about Digital Signature</text>
+                      <postback>Digital Signature</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Computer Network Security</text>
+                      <postback>Computer Network Security</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Authentication</pattern>
+            <template>A public key encryption does not have a built-in authentication. Without authentication, the message can be interpreted or intercepted without the user's knowledge.
+                                                                                  <delay>2</delay>
+                    <button>
+                      <text>Learn more about Digital Signature</text>
+                      <postback>Digital Signature</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Computer Network Security</text>
+                      <postback>Computer Network Security</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Non-Repudiation</pattern>
+            <template>Non-Repudiation means that the receiver must be able to prove that the received message has come from a specific sender. The sender must not deny sending a message that he or she send. The burden of proving the identity comes on the receiver. For example, if a customer sends a request to transfer the money from one account to another account, then the bank must have a proof that the customer has requested for the transaction.
+                                                                                  <delay>2</delay>
+                    <button>
+                      <text>Learn more about Digital Signature</text>
+                      <postback>Digital Signature</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Computer Network Security</text>
+                      <postback>Computer Network Security</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        
+    </topic>
+</aiml>

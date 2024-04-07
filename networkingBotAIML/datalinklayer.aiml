@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	
+	    <topic name="dataLinkLayer">
+        
+        <category>
+            <pattern>learn *</pattern>
+            <template>you can learn about this things of Data Link layer:
+            <ul>
+                <li>How big Data Link layer is</li>
+                <li>The most important thing about Data Link laye</li>
+                <li>What this Data Link layer about</li>
+                <li>What did you learn about Data Link layer</li>
+            </ul>
+            Choose!
+            <learn>
+                <category>
+                    <pattern>What did you learn about Data Link layer</pattern>
+                    <template><eval><star/></eval></template>
+                </category>
+                <category>
+                    <pattern>How big Data Link layer is</pattern>
+                    <template>It has 6 things to learn</template>
+                </category>
+                <category>
+                    <pattern>The most important thing about Data Link layer</pattern>
+                    <template>Reliable delivery</template>
+                </category>
+                <category>
+                    <pattern>What this Data Link layer about</pattern>
+                    <template>The main responsibility of the Data Link Layer is to transfer the datagram across an individual link.
+                    </template>
+                </category>
+            </learn>   
+            </template>
+        </category>
+        
+        
+           <category>
+                <pattern>Data Link layer</pattern>
+                <template>
+                <get name="username"></get>, what subcategory of models do you want?
+                <button>
+                    <text>Framing and Link access</text>
+                    <postback>Framing and Link access</postback>
+                </button>
+                <button>
+                    <text>Reliable delivery</text>
+                    <postback>Reliable delivery</postback>
+                </button>
+                <button>
+                    <text>Flow control</text>
+                    <postback>Flow control</postback>
+                </button>
+                <button>
+                    <text>Error Detection</text>
+                    <postback>Error Detection</postback>
+                </button>
+                <button>
+                    <text>Error Correction</text>
+                    <postback>Error Correction</postback>
+                </button>
+                <button>
+                    <text>Half-Duplex and Full-Duplex</text>
+                    <postback>HalfDuplex and FullDuplex</postback>
+                </button>
+                                <button>
+                    <text>Try new category of networking</text>
+                    <postback>newnet</postback>
+                </button>
+                </template>
+            </category>
+            
+                    <category>
+            <pattern>^ <set>reset</set> ^</pattern>
+            <template>
+                <think><set name="topic">*</set></think>
+                Start a new chat with a "hello".
+            </template>
+        </category>
+            
+            <category>
+            <pattern>newnet</pattern>
+            <template>
+                <think><set name="topic">intro</set></think>
+                Lets try a new category!
+                <button>
+                    <text>Computer Network</text>
+                    <postback>Computer Network</postback>
+                </button>
+                <button>
+                    <text>Models</text>
+                    <postback>Models</postback>
+                </button>
+                <button>
+                    <text>Data Link layer</text>
+                    <postback>Data Link layer</postback>
+                </button>
+                <button>
+                    <text>Network Layer</text>
+                    <postback>Network Layer</postback>
+                </button>
+                <button>
+                    <text>Routing Algorithm</text>
+                    <postback>Routing Algorithm</postback>
+                </button>
+                <button>
+                    <text>Transport Layer</text>
+                    <postback>Transport Layer</postback>
+                </button>
+                <button>
+                    <text>Application Layer</text>
+                    <postback>Application Layer</postback>
+                </button>
+                <button>
+                    <text>Application Protocols</text>
+                    <postback>Application Protocols</postback>
+                </button>
+                <button>
+                    <text>Computer Network Security</text>
+                    <postback>Computer Network Security</postback>
+                </button>
+            </template>
+        </category>
+        
+    <category>
+        <pattern>^ <set>changecat</set> ^</pattern>
+        <template><srai>newnet</srai></template>
+    </category>
+        
+        <category>
+            <pattern>Framing and Link access</pattern>
+            <template>
+                Data Link Layer protocols encapsulate each network frame within a Link layer frame before the transmission across the link. A frame consists of a data field in which network layer datagram is inserted and a number of data fields. It specifies the structure of the frame as well as a channel access protocol by which frame is to be transmitted over the link.
+                <delay>2</delay>
+                  <button>
+                      <text>Learn more about Data Link layer</text>
+                      <postback>Data Link layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Reliable delivery</pattern>
+            <template>Data Link Layer provides a reliable delivery service, i.e., transmits the network layer datagram without any error. A reliable delivery service is accomplished with transmissions and acknowledgements. A data link layer mainly provides the reliable delivery service over the links as they have higher error rates and they can be corrected locally, link at which an error occurs rather than forcing to retransmit the data.
+                            <delay>2</delay>
+                  <button>
+                      <text>Learn more about Data Link layer</text>
+                      <postback>Data Link layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Flow control</pattern>
+            <template>A receiving node can receive the frames at a faster rate than it can process the frame. Without flow control, the receiver's buffer can overflow, and frames can get lost. To overcome this problem, the data link layer uses the flow control to prevent the sending node on one side of the link from overwhelming the receiving node on another side of the link.
+                            <delay>2</delay>
+                  <button>
+                      <text>Learn more about Data Link layer</text>
+                      <postback>Data Link layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Error Detection</pattern>
+            <template>Errors can be introduced by signal attenuation and noise. Data Link Layer protocol provides a mechanism to detect one or more errors. This is achieved by adding error detection bits in the frame and then receiving node can perform an error check.
+                            <delay>2</delay>
+                  <button>
+                      <text>Learn more about Data Link layer</text>
+                      <postback>Data Link layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Error Correction</pattern>
+            <template>Error correction is similar to the Error detection, except that receiving node not only detect the errors but also determine where the errors have occurred in the frame.
+                            <delay>2</delay>
+                  <button>
+                      <text>Learn more about Data Link layer</text>
+                      <postback>Data Link layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>HalfDuplex and FullDuplex</pattern>
+            <template>In a Full-Duplex mode, both the nodes can transmit the data at the same time. In a Half-Duplex mode, only one node can transmit the data at the same time.
+                            <delay>2</delay>
+                  <button>
+                      <text>Learn more about Data Link layer</text>
+                      <postback>Data Link layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+
+        
+    </topic>
+	
+</aiml>

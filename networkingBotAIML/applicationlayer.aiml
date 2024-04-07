@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	    <topic name="applicationLayer">
+        
+        <category>
+            <pattern>learn</pattern>
+            <template>you can learn about this things of Application Layer:
+            <ul>
+                <li>How big Application Layer is</li>
+                <li>The most important subcategory of Application Layer</li>
+                <li>What this Application Layer about</li>
+            </ul>
+            Choose!
+            <learn>
+                <category>
+                    <pattern>How big Application Layer is</pattern>
+                    <template>It has 2 subcategories</template>
+                </category>
+                <category>
+                    <pattern>The most important subcategory of Application Layer</pattern>
+                    <template>Services of Application Layers</template>
+                </category>
+                <category>
+                    <pattern>What this Application Layer about</pattern>
+                    <template>The application layer in the OSI model is the closest layer to the end user which means that the application layer and end user can interact directly with the software application. The application layer programs are based on client and servers.
+                    </template>
+                </category>
+            </learn>   
+            </template>
+        </category>
+        
+                    <category>
+                <pattern>Application Layer</pattern>
+                <template>
+                <get name="username"></get>, what subcategory of Application Layer do you want?
+                <button>
+                    <text>Services of Application Layers</text>
+                    <postback>Services of Application Layers</postback>
+                </button>
+                <button>
+                    <text>Client and Server Model</text>
+                    <postback>Client and Server Model</postback>
+                </button>
+                <button>
+                    <text>Try new category of networking</text>
+                    <postback>newnet</postback>
+                </button>
+                </template>
+            </category>
+            
+                    <category>
+            <pattern>^ <set>reset</set> ^</pattern>
+            <template>
+                <think><set name="topic">*</set></think>
+                Start a new chat with a "hello".
+            </template>
+        </category>
+            
+            <category>
+            <pattern>newnet</pattern>
+            <template>
+                <think><set name="topic">intro</set></think>
+                Lets try a new category!
+                <button>
+                    <text>Computer Network</text>
+                    <postback>Computer Network</postback>
+                </button>
+                <button>
+                    <text>Models</text>
+                    <postback>Models</postback>
+                </button>
+                <button>
+                    <text>Data Link layer</text>
+                    <postback>Data Link layer</postback>
+                </button>
+                <button>
+                    <text>Network Layer</text>
+                    <postback>Network Layer</postback>
+                </button>
+                <button>
+                    <text>Routing Algorithm</text>
+                    <postback>Routing Algorithm</postback>
+                </button>
+                <button>
+                    <text>Transport Layer</text>
+                    <postback>Transport Layer</postback>
+                </button>
+                <button>
+                    <text>Application Layer</text>
+                    <postback>Application Layer</postback>
+                </button>
+                <button>
+                    <text>Application Protocols</text>
+                    <postback>Application Protocols</postback>
+                </button>
+                <button>
+                    <text>Computer Network Security</text>
+                    <postback>Computer Network Security</postback>
+                </button>
+            </template>
+        </category>
+        
+    <category>
+        <pattern>^ <set>changecat</set> ^</pattern>
+        <template><srai>newnet</srai></template>
+    </category>
+        
+        <category>
+            <pattern>Services of Application Layers</pattern>
+            <template>What do you want to know about Services of Application Layers?
+                <button>
+                    <text>Network Virtual terminal</text>
+                    <postback>Network Virtual terminal</postback>
+                </button>
+                <button>
+                    <text>File Transfer, Access, and Management</text>
+                    <postback>File Transfer, Access, and Management</postback>
+                </button>
+                <button>
+                    <text>Application Layers Addressing</text>
+                    <postback>Application Layers Addressing</postback>
+                </button>
+                <button>
+                    <text>Mail Services</text>
+                    <postback>Mail Services</postback>
+                </button>
+                <button>
+                    <text>Directory Services</text>
+                    <postback>Directory Services</postback>
+                </button>
+                <button>
+                    <text>Back</text>
+                    <postback>Application Layer</postback>
+                </button>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Network Virtual terminal</pattern>
+            <template>An application layer allows a user to log on to a remote host. To do so, the application creates a software emulation of a terminal at the remote host. The user's computer talks to the software terminal, which in turn, talks to the host. The remote host thinks that it is communicating with one of its own terminals, so it allows the user to log on.
+                                            <delay>2</delay>
+                    <button>
+                      <text>Learn more about Services of Application Layers</text>
+                      <postback>Services of Application Layers</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Application Layer</text>
+                      <postback>Application Layer</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+                  </template>
+        </category>
+        <category>
+            <pattern>File Transfer, Access, and Management</pattern>
+            <template>An application allows a user to access files in a remote computer, to retrieve files from a computer and to manage files in a remote computer. FTAM defines a hierarchical virtual file in terms of file structure, file attributes and the kind of operations performed on the files and their attributes.
+                                            <delay>2</delay>
+                    <button>
+                      <text>Learn more about Services of Application Layers</text>
+                      <postback>Services of Application Layers</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Application Layer</text>
+                      <postback>Application Layer</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Application Layers Addressing</pattern>
+            <template>To obtain communication between client and server, there is a need for addressing. When a client made a request to the server, the request contains the server address and its own address. The server response to the client request, the request contains the destination address, i.e., client address. To achieve this kind of addressing, DNS is used.
+                                            <delay>2</delay>
+                    <button>
+                      <text>Learn more about Services of Application Layers</text>
+                      <postback>Services of Application Layers</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Application Layer</text>
+                      <postback>Application Layer</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Mail Services</pattern>
+            <template>An application layer provides Email forwarding and storage.
+                                            <delay>2</delay>
+                    <button>
+                      <text>Learn more about Services of Application Layers</text>
+                      <postback>Services of Application Layers</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Application Layer</text>
+                      <postback>Application Layer</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Directory Services</pattern>
+            <template>An application contains a distributed database that provides access for global information about various objects and services.
+Authentication: It authenticates the sender or receiver's message or both.
+                                            <delay>2</delay>
+                    <button>
+                      <text>Learn more about Services of Application Layers</text>
+                      <postback>Services of Application Layers</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Application Layer</text>
+                      <postback>Application Layer</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        
+        <category>
+            <pattern>Client and Server Model</pattern>
+            <template>What do you want to know about Client and Server Model?
+                <button>
+                    <text>Client</text>
+                    <postback>Client</postback>
+                </button>
+                <button>
+                    <text>Server</text>
+                    <postback>Server</postback>
+                </button>
+                <button>
+                    <text>Disadvantages of Client-Server network</text>
+                    <postback>Disadvantages of ClientServer network</postback>
+                </button>
+                <button>
+                    <text>Advantages of Client-server networks</text>
+                    <postback>Advantages of Clientserver networks</postback>
+                </button>
+                <button>
+                    <text>Back</text>
+                    <postback>Application Layer</postback>
+                </button>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Client</pattern>
+            <template>A client is a program that runs on the local machine requesting service from the server. A client program is a finite program means that the service started by the user and terminates when the service is completed.
+                                            <delay>2</delay>
+                    <button>
+                      <text>Learn more about Client and Server Model</text>
+                      <postback>Client and Server Model</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Application Layer</text>
+                      <postback>Application Layer</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Server</pattern>
+            <template>A server is a program that runs on the remote machine providing services to the clients. When the client requests for a service, then the server opens the door for the incoming requests, but it never initiates the service.
+
+A server program is an infinite program means that when it starts, it runs infinitely unless the problem arises. The server waits for the incoming requests from the clients. When the request arrives at the server, then it responds to the request.
+                                            <delay>2</delay>
+                    <button>
+                      <text>Learn more about Client and Server Model</text>
+                      <postback>Client and Server Model</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Application Layer</text>
+                      <postback>Application Layer</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        <category>
+            <pattern>Disadvantages of ClientServer network</pattern>
+            <template>Traffic Congestion is a big problem in Client/Server networks. When a large number of clients send requests to the same server may cause the problem of Traffic congestion.
+                                                   <delay>2</delay>
+                    <button>
+                      <text>Learn more about Client and Server Model</text>
+                      <postback>Client and Server Model</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Application Layer</text>
+                      <postback>Application Layer</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Advantages of Clientserver networks</pattern>
+            <template>What do you want to know about Advantages of Client-server networks?
+                <button>
+                    <text>Centralized</text>
+                    <postback>Centralized</postback>
+                </button>
+                <button>
+                    <text>Security</text>
+                    <postback>Security</postback>
+                </button>
+                <button>
+                    <text>Performance</text>
+                    <postback>Performance</postback>
+                </button>
+                <button>
+                    <text>Scalability</text>
+                    <postback>Scalability</postback>
+                </button>
+                <button>
+                    <text>Back</text>
+                    <postback>Client and Server Model</postback>
+                </button>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Centralized</pattern>
+            <template>Centralized back-up is possible in client-server networks, i.e., all the data is stored in a server.
+                                                                    <delay>2</delay>
+                    <button>
+                      <text>Learn more about Advantages of Client-server networks</text>
+                      <postback>Advantages of Clientserver networks</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Application Layer</text>
+                      <postback>Application Layer</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Security</pattern>
+            <template>These networks are more secure as all the shared resources are centrally administered.
+                                                                    <delay>2</delay>
+                    <button>
+                      <text>Learn more about Advantages of Client-server networks</text>
+                      <postback>Advantages of Clientserver networks</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Application Layer</text>
+                      <postback>Application Layer</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Performance</pattern>
+            <template>The use of the dedicated server increases the speed of sharing resources. This increases the performance of the overall system.
+                                                                    <delay>2</delay>
+                    <button>
+                      <text>Learn more about Advantages of Client-server networks</text>
+                      <postback>Advantages of Clientserver networks</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Application Layer</text>
+                      <postback>Application Layer</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Scalability</pattern>
+            <template>We can increase the number of clients and servers separately, i.e., the new element can be added, or we can add a new node in a network at any time.
+                                                                  <delay>2</delay>
+                    <button>
+                      <text>Learn more about Advantages of Client-server networks</text>
+                      <postback>Advantages of Clientserver networks</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Application Layer</text>
+                      <postback>Application Layer</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        
+        
+    </topic>
+</aiml>

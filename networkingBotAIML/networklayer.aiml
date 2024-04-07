@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	    <topic name="networkLayer">
+        
+        <category>
+            <pattern>learn</pattern>
+            <template>you can learn about this things of Network Layer:
+            <ul>
+                <li>How big Network Layer is</li>
+                <li>The most important subcategory of Network Layer</li>
+                <li>What this Network Layer about</li>
+            </ul>
+            Choose!
+            <learn>
+                <category>
+                    <pattern>How big Network Layer is</pattern>
+                    <template>It has 3 subcategories</template>
+                </category>
+                <category>
+                    <pattern>The most important subcategory of Network Layer</pattern>
+                    <template>Network Addressing</template>
+                </category>
+                <category>
+                    <pattern>What this Network Layer about</pattern>
+                    <template>The main role of the network layer is to move the packets from sending host to the receiving host.
+                    </template>
+                </category>
+            </learn>   
+            </template>
+        </category>
+        
+            <category>
+                <pattern>Network Layer</pattern>
+                <template>
+                <get name="username"></get>, what subcategory of Network Layer do you want?
+                <button>
+                    <text>Network Addressing</text>
+                    <postback>Network Addressing</postback>
+                </button>
+                <button>
+                    <text>Routing</text>
+                    <postback>Routing</postback>
+                </button>
+                <button>
+                    <text>Network Layer Protocols</text>
+                    <postback>Network Layer Protocols</postback>
+                </button>
+                <button>
+                    <text>Try new category of networking</text>
+                    <postback>newnet</postback>
+                </button>
+                </template>
+            </category>
+            
+                    <category>
+            <pattern>^ <set>reset</set> ^</pattern>
+            <template>
+                <think><set name="topic">*</set></think>
+                Start a new chat with a "hello".
+            </template>
+        </category>
+            
+            <category>
+            <pattern>newnet</pattern>
+            <template>
+                <think><set name="topic">intro</set></think>
+                Lets try a new category!
+                <button>
+                    <text>Computer Network</text>
+                    <postback>Computer Network</postback>
+                </button>
+                <button>
+                    <text>Models</text>
+                    <postback>Models</postback>
+                </button>
+                <button>
+                    <text>Data Link layer</text>
+                    <postback>Data Link layer</postback>
+                </button>
+                <button>
+                    <text>Network Layer</text>
+                    <postback>Network Layer</postback>
+                </button>
+                <button>
+                    <text>Routing Algorithm</text>
+                    <postback>Routing Algorithm</postback>
+                </button>
+                <button>
+                    <text>Transport Layer</text>
+                    <postback>Transport Layer</postback>
+                </button>
+                <button>
+                    <text>Application Layer</text>
+                    <postback>Application Layer</postback>
+                </button>
+                <button>
+                    <text>Application Protocols</text>
+                    <postback>Application Protocols</postback>
+                </button>
+                <button>
+                    <text>Computer Network Security</text>
+                    <postback>Computer Network Security</postback>
+                </button>
+            </template>
+        </category>
+        
+    <category>
+        <pattern>^ <set>changecat</set> ^</pattern>
+        <template><srai>newnet</srai></template>
+    </category>
+        
+        <category>
+            <pattern>Network Addressing</pattern>
+            <template>What do you want to learn from Network Addressing?
+                <button>
+                    <text>Classful Addressing</text>
+                    <postback>Classful Addressing</postback>
+                </button>
+                <button>
+                    <text>Rules for assigning Host ID</text>
+                    <postback>Rules for assigning Host ID</postback>
+                </button>
+                <button>
+                    <text>Rules for assigning Network ID</text>
+                    <postback>Rules for assigning Network ID</postback>
+                </button>
+                <button>
+                    <text>Classful Network Architecture</text>
+                    <postback>Classful Network Architecture</postback>
+                </button>
+                <button>
+                    <text>Back</text>
+                    <postback>Network Layer</postback>
+                </button>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Classful Addressing</pattern>
+            <template>There are 5 classes which one of them do you want to learn more?
+            <button>
+                <text>Class A</text>
+                <postback>Class A</postback>
+            </button>
+            <button>
+                <text>Class B</text>
+                <postback>Class B</postback>
+            </button>
+            <button>
+                <text>Class C</text>
+                <postback>Class C</postback>
+            </button>
+            <button>
+                <text>Class D</text>
+                <postback>Class D</postback>
+            </button>
+            <button>
+                <text>Class E</text>
+                <postback>Class E</postback>
+            </button>
+            <button>
+                <text>Back</text>
+                <postback>Network Addressing</postback>
+            </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Rules for assigning Host ID</pattern>
+            <template>The Host ID is used to determine the host within any network. The Host ID is assigned based on the following rules:
+
+The Host ID must be unique within any network.
+The Host ID in which all the bits are set to 0 cannot be assigned as it is used to represent the network ID of the IP address.
+The Host ID in which all the bits are set to 1 cannot be assigned as it is reserved for the multicast address.
+ <delay>2</delay>
+                    <button>
+                      <text>Learn more about Network Addressing</text>
+                      <postback>Network Addressing</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Network Layer</text>
+                      <postback>Network Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        <category>
+            <pattern>Rules for assigning Network ID</pattern>
+            <template>If the hosts are located within the same local network, then they are assigned with the same network ID. The following are the rules for assigning Network ID:
+
+The network ID cannot start with 127 as 127 is used by Class A.
+The Network ID in which all the bits are set to 0 cannot be assigned as it is used to specify a particular host on the local network.
+The Network ID in which all the bits are set to 1 cannot be assigned as it is reserved for the multicast address.
+<delay>2</delay>
+                    <button>
+                      <text>Learn more about Network Addressing</text>
+                      <postback>Network Addressing</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Network Layer</text>
+                      <postback>Network Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        <category>
+            <pattern>Classful Network Architecture</pattern>
+            <template>
+                Class Higher bits NET ID bits HOST ID bits No.of networks No.of hosts per network Range
+A 0 8 24 27 224 0.0.0.0 to 127.255.255.255
+B 10 16 16 214 216 128.0.0.0 to 191.255.255.255
+C 110 24 8 221 28 192.0.0.0 to 223.255.255.255
+D 1110 Not Defined Not Defined Not Defined Not Defined 224.0.0.0 to 239.255.255.255
+E 1111 Not Defined Not Defined Not Defined Not Defined 240.0.0.0 to 255.255.255.255
+B 10 16 16 214 216 128.0.0.0 to 191.255.255.255
+C 110 24 8 221 28 192.0.0.0 to 223.255.255.255
+D 1110 Not Defined Not Defined Not Defined Not Defined 224.0.0.0 to 239.255.255.255
+E 1111 Not Defined Not Defined Not Defined Not Defined 240.0.0.0 to 255.255.255.255
+<delay>2</delay>
+                    <button>
+                      <text>Learn more about Network Addressing</text>
+                      <postback>Network Addressing</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Network Layer</text>
+                      <postback>Network Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        
+        <category>
+            <pattern>Class A</pattern>
+            <template>In Class A, an IP address is assigned to those networks that contain a large number of hosts.
+
+The network ID is 8 bits long.
+The host ID is 24 bits long.
+In Class A, the first bit in higher order bits of the first octet is always set to 0 and the remaining 7 bits determine the network ID. The 24 bits determine the host ID in any network.
+
+The total number of networks in Class A = 27 = 128 network address
+
+The total number of hosts in Class A = 224 - 2 = 16,777,214 host address
+<delay>2</delay>
+                    <button>
+                      <text>Learn more about Classful Addressing</text>
+                      <postback>Classful Addressing</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Network Layer</text>
+                      <postback>Network Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        <category>
+            <pattern>Class B</pattern>
+            <template>In Class B, an IP address is assigned to those networks that range from small-sized to large-sized networks.
+
+The Network ID is 16 bits long.
+The Host ID is 16 bits long.
+In Class B, the higher order bits of the first octet is always set to 10, and the remaining14 bits determine the network ID. The other 16 bits determine the Host ID.
+
+The total number of networks in Class B = 214 = 16384 network address
+
+The total number of hosts in Class B = 216 - 2 = 65534 host address
+<delay>2</delay>
+                    <button>
+                      <text>Learn more about Classful Addressing</text>
+                      <postback>Classful Addressing</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Network Layer</text>
+                      <postback>Network Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        <category>
+            <pattern>Class C</pattern>
+            <template>In Class C, an IP address is assigned to only small-sized networks.
+
+The Network ID is 24 bits long.
+The host ID is 8 bits long.
+In Class C, the higher order bits of the first octet is always set to 110, and the remaining 21 bits determine the network ID. The 8 bits of the host ID determine the host in a network.
+
+The total number of networks = 221 = 2097152 network address
+
+The total number of hosts = 28 - 2 = 254 host address
+<delay>2</delay>
+                    <button>
+                      <text>Learn more about Classful Addressing</text>
+                      <postback>Classful Addressing</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Network Layer</text>
+                      <postback>Network Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        <category>
+            <pattern>Class D</pattern>
+            <template>In Class D, an IP address is reserved for multicast addresses. It does not possess subnetting. The higher order bits of the first octet is always set to 1110, and the remaining bits determines the host ID in any network.
+            <delay>2</delay>
+                    <button>
+                      <text>Learn more about Classful Addressing</text>
+                      <postback>Classful Addressing</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Network Layer</text>
+                      <postback>Network Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Class E</pattern>
+            <template>In Class E, an IP address is used for the future use or for the research and development purposes. It does not possess any subnetting. The higher order bits of the first octet is always set to 1111, and the remaining bits determines the host ID in any network.
+            <delay>2</delay>
+                    <button>
+                      <text>Learn more about Classful Addressing</text>
+                      <postback>Classful Addressing</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Network Layer</text>
+                      <postback>Network Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        
+        
+        <category>
+            <pattern>Routing</pattern>
+            <template>What do you want to learn from Routing?
+                <button>
+                    <text>Routing Metrics and Costs</text>
+                    <postback>Routing Metrics and Costs</postback>
+                </button>
+                <button>
+                    <text>Types of Routing</text>
+                    <postback>Types of Routing</postback>
+                </button>
+                <button>
+                    <text>Back</text>
+                    <postback>Network Layer</postback>
+                </button>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Routing Metrics and Costs</pattern>
+            <template>What do you want to learn from Routing Metrics and Costs?
+                <button>
+                    <text>Hop count</text>
+                    <postback>Hop count</postback>
+                </button>
+                <button>
+                    <text>Delay</text>
+                    <postback>Delay</postback>
+                </button>
+                <button>
+                    <text>Bandwidth</text>
+                    <postback>Bandwidth</postback>
+                </button>
+                <button>
+                    <text>Load</text>
+                    <postback>Load</postback>
+                </button>
+                <button>
+                    <text>Reliability</text>
+                    <postback>Reliability</postback>
+                </button>
+            <button>
+                <text>Back</text>
+                <postback>Routing</postback>
+            </button>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Hop count</pattern>
+            <template>Hop count is defined as a metric that specifies the number of passes through internetworking devices such as a router, a packet must travel in a route to move from source to the destination. If the routing protocol considers the hop as a primary metric value, then the path with the least hop count will be considered as the best path to move from source to the destination.
+            <delay>2</delay>
+                    <button>
+                      <text>Learn more about Routing Metrics and Costs</text>
+                      <postback>Routing Metrics and Costs</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Network Layer</text>
+                      <postback>Network Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Delay</pattern>
+            <template>It is a time taken by the router to process, queue and transmit a datagram to an interface. The protocols use this metric to determine the delay values for all the links along the path end-to-end. The path having the lowest delay value will be considered as the best path.
+                        <delay>2</delay>
+                    <button>
+                      <text>Learn more about Routing Metrics and Costs</text>
+                      <postback>Routing Metrics and Costs</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Network Layer</text>
+                      <postback>Network Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Bandwidth</pattern>
+            <template>The capacity of the link is known as a bandwidth of the link. The bandwidth is measured in terms of bits per second. The link that has a higher transfer rate like gigabit is preferred over the link that has the lower capacity like 56 kb. The protocol will determine the bandwidth capacity for all the links along the path, and the overall higher bandwidth will be considered as the best route.
+                                    <delay>2</delay>
+                    <button>
+                      <text>Learn more about Routing Metrics and Costs</text>
+                      <postback>Routing Metrics and Costs</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Network Layer</text>
+                      <postback>Network Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Load</pattern>
+            <template>Load refers to the degree to which the network resource such as a router or network link is busy. A Load can be calculated in a variety of ways such as CPU utilization, packets processed per second. If the traffic increases, then the load value will also be increased. The load value changes with respect to the change in the traffic.
+                        <delay>2</delay>
+                    <button>
+                      <text>Learn more about Routing Metrics and Costs</text>
+                      <postback>Routing Metrics and Costs</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Network Layer</text>
+                      <postback>Network Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Reliability</pattern>
+            <template>Reliability is a metric factor may be composed of a fixed value. It depends on the network links, and its value is measured dynamically. Some networks go down more often than others. After network failure, some network links repaired more easily than other network links. Any reliability factor can be considered for the assignment of reliability ratings, which are generally numeric values assigned by the system administrator.
+                        <delay>2</delay>
+                    <button>
+                      <text>Learn more about Routing Metrics and Costs</text>
+                      <postback>Routing Metrics and Costs</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Network Layer</text>
+                      <postback>Network Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Types of Routing</pattern>
+            <template>What do you want to learn from Types of Routing?
+                <button>
+                    <text>Static Routing</text>
+                    <postback>Static Routing</postback>
+                </button>
+                <button>
+                    <text>Default Routing</text>
+                    <postback>Default Routing</postback>
+                </button>
+                <button>
+                    <text>Dynamic Routing</text>
+                    <postback>Dynamic Routing</postback>
+                </button>
+            <button>
+                <text>Back</text>
+                <postback>Routing</postback>
+            </button>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Static Routing</pattern>
+            <template>Static Routing is also known as Nonadaptive Routing.
+It is a technique in which the administrator manually adds the routes in a routing table.
+A Router can send the packets for the destination along the route defined by the administrator.
+In this technique, routing decisions are not made based on the condition or topology of the networks
+                        <delay>2</delay>
+                    <button>
+                      <text>Learn more about Types of Routing</text>
+                      <postback>Types of Routing</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Network Layer</text>
+                      <postback>Network Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        <category>
+            <pattern>Default Routing</pattern>
+            <template>Default Routing is a technique in which a router is configured to send all the packets to the same hop device, and it doesn't matter whether it belongs to a particular network or not. A Packet is transmitted to the device for which it is configured in default routing.
+Default Routing is used when networks deal with the single exit point.
+It is also useful when the bulk of transmission networks have to transmit the data to the same hp device.
+When a specific route is mentioned in the routing table, the router will choose the specific route rather than the default route. The default route is chosen only when a specific route is not mentioned in the routing table.
+                        <delay>2</delay>
+                    <button>
+                      <text>Learn more about Types of Routing</text>
+                      <postback>Types of Routing</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Network Layer</text>
+                      <postback>Network Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        <category>
+            <pattern>Dynamic Routing</pattern>
+            <template>It is also known as Adaptive Routing.
+It is a technique in which a router adds a new route in the routing table for each packet in response to the changes in the condition or topology of the network.
+Dynamic protocols are used to discover the new routes to reach the destination.
+In Dynamic Routing, RIP and OSPF are the protocols used to discover the new routes.
+If any route goes down, then the automatic adjustment will be made to reach the destination.
+                        <delay>2</delay>
+                    <button>
+                      <text>Learn more about Types of Routing</text>
+                      <postback>Types of Routing</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Network Layer</text>
+                      <postback>Network Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        
+        
+        <category>
+            <pattern>Network Layer Protocols</pattern>
+            <template>What do you want to learn from Network Layer Protocols?
+                <button>
+                    <text>ARP</text>
+                    <postback>ARP</postback>
+                </button>
+                <button>
+                    <text>RARP</text>
+                    <postback>RARP</postback>
+                </button>
+                <button>
+                    <text>ICMP</text>
+                    <postback>ICMP</postback>
+                </button>
+                <button>
+                    <text>IGMP</text>
+                    <postback>IGMP</postback>
+                </button>
+            <button>
+                <text>Back</text>
+                <postback>Network Layer</postback>
+            </button>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>ARP</pattern>
+            <template>ARP stands for Address Resolution Protocol.
+It is used to associate an IP address with the MAC address.
+Each device on the network is recognized by the MAC address imprinted on the NIC. Therefore, we can say that devices need the MAC address for communication on a local area network. MAC address can be changed easily. For example, if the NIC on a particular machine fails, the MAC address changes but IP address does not change. ARP is used to find the MAC address of the node when an internet address is known.
+                        <delay>2</delay>
+                    <button>
+                      <text>Learn more about Network Layer Protocols</text>
+                      <postback>Network Layer Protocols</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Network Layer</text>
+                      <postback>Network Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        <category>
+            <pattern>RARP</pattern>
+            <template>RARP stands for Reverse Address Resolution Protocol.
+If the host wants to know its IP address, then it broadcast the RARP query packet that contains its physical address to the entire network. A RARP server on the network recognizes the RARP packet and responds back with the host IP address.
+The protocol which is used to obtain the IP address from a server is known as Reverse Address Resolution Protocol.
+The message format of the RARP protocol is similar to the ARP protocol.
+Like ARP frame, RARP frame is sent from one machine to another encapsulated in the data portion of a frame.
+                        <delay>2</delay>
+                    <button>
+                      <text>Learn more about Network Layer Protocols</text>
+                      <postback>Network Layer Protocols</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Network Layer</text>
+                      <postback>Network Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        <category>
+            <pattern>ICMP</pattern>
+            <template>ICMP stands for Internet Control Message Protocol.
+The ICMP is a network layer protocol used by hosts and routers to send the notifications of IP datagram problems back to the sender.
+ICMP uses echo test/reply to check whether the destination is reachable and responding.
+ICMP handles both control and error messages, but its main function is to report the error but not to correct them.
+An IP datagram contains the addresses of both source and destination, but it does not know the address of the previous router through which it has been passed. Due to this reason, ICMP can only send the messages to the source, but not to the immediate routers.
+ICMP protocol communicates the error messages to the sender. ICMP messages cause the errors to be returned back to the user processes.
+ICMP messages are transmitted within IP datagram.
+                        <delay>2</delay>
+                    <button>
+                      <text>Learn more about Network Layer Protocols</text>
+                      <postback>Network Layer Protocols</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Network Layer</text>
+                      <postback>Network Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        <category>
+            <pattern>IGMP</pattern>
+            <template>IGMP stands for Internet Group Message Protocol.
+The IP protocol supports two types of communication:
+Unicasting: It is a communication between one sender and one receiver. Therefore, we can say that it is one-to-one communication.
+Multicasting: Sometimes the sender wants to send the same message to a large number of receivers simultaneously. This process is known as multicasting which has one-to-many communication.
+The IGMP protocol is used by the hosts and router to support multicasting.
+The IGMP protocol is used by the hosts and router to identify the hosts in a LAN that are the members of a group.
+                        <delay>2</delay>
+                    <button>
+                      <text>Learn more about Network Layer Protocols</text>
+                      <postback>Network Layer Protocols</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Network Layer</text>
+                      <postback>Network Layer</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        
+    </topic>
+</aiml>

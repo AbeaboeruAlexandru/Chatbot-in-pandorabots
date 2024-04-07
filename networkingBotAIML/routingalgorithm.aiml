@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+		    <topic name="routingAlgorithm">
+        
+        <category>
+            <pattern>learn</pattern>
+            <template>you can learn about this things of Routing Algorithm:
+            <ul>
+                <li>How big Routing Algorithm is</li>
+                <li>The most important subcategory of Routing Algorithm</li>
+                <li>What this Routing Algorithm about</li>
+            </ul>
+            Choose!
+            <learn>
+                <category>
+                    <pattern>How big Routing Algorithm is</pattern>
+                    <template>It has 3 subcategories</template>
+                </category>
+                <category>
+                    <pattern>The most important subcategory of Routing Algorithm</pattern>
+                    <template>Link State Routing</template>
+                </category>
+                <category>
+                    <pattern>What this Routing Algorithm about</pattern>
+                    <template>In order to transfer the packets from source to the destination, the network layer must determine the best route through which packets can be transmitted.
+                    </template>
+                </category>
+            </learn>   
+            </template>
+        </category>
+        
+            <category>
+                <pattern>Routing Algorithm</pattern>
+                <template>
+                <get name="username"></get>, what subcategory of Routing Algorithm do you want?
+                <button>
+                    <text>Adaptive Routing algorithm</text>
+                    <postback>Adaptive Routing algorithm</postback>
+                </button>
+                <button>
+                    <text>Non-adaptive Routing algorithm</text>
+                    <postback>Nonadaptive Routing algorithm</postback>
+                </button>
+                <button>
+                    <text>Link State Routing</text>
+                    <postback>Link State Routing</postback>
+                </button>
+                <button>
+                    <text>Try new category of networking</text>
+                    <postback>newnet</postback>
+                </button>
+                </template>
+            </category>
+        
+        <category>
+            <pattern>newnet</pattern>
+            <template>
+                <think><set name="topic">intro</set></think>
+                Lets try a new category!
+                <button>
+                    <text>Computer Network</text>
+                    <postback>Computer Network</postback>
+                </button>
+                <button>
+                    <text>Models</text>
+                    <postback>Models</postback>
+                </button>
+                <button>
+                    <text>Data Link layer</text>
+                    <postback>Data Link layer</postback>
+                </button>
+                <button>
+                    <text>Network Layer</text>
+                    <postback>Network Layer</postback>
+                </button>
+                <button>
+                    <text>Routing Algorithm</text>
+                    <postback>Routing Algorithm</postback>
+                </button>
+                <button>
+                    <text>Transport Layer</text>
+                    <postback>Transport Layer</postback>
+                </button>
+                <button>
+                    <text>Application Layer</text>
+                    <postback>Application Layer</postback>
+                </button>
+                <button>
+                    <text>Application Protocols</text>
+                    <postback>Application Protocols</postback>
+                </button>
+                <button>
+                    <text>Computer Network Security</text>
+                    <postback>Computer Network Security</postback>
+                </button>
+            </template>
+        </category>
+        
+    <category>
+        <pattern>^ <set>changecat</set> ^</pattern>
+        <template><srai>newnet</srai></template>
+    </category>
+        
+        <category>
+            <pattern>Adaptive Routing algorithm</pattern>
+            <template>What do you want to learn from Adaptive Routing algorithm?
+                <button>
+                    <text>Centralized algorithm</text>
+                    <postback>Centralized algorithm</postback>
+                </button>
+                <button>
+                    <text>Isolation algorithm</text>
+                    <postback>Isolation algorithm</postback>
+                </button>
+                <button>
+                    <text>Distributed algorithm</text>
+                    <postback>Distributed algorithm</postback>
+                </button>
+                <button>
+                    <text>Back</text>
+                    <postback>Routing Algorithm</postback>
+                </button>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Centralized algorithm</pattern>
+            <template>It is also known as global routing algorithm as it computes the least-cost path between source and destination by using complete and global knowledge about the network. This algorithm takes the connectivity between the nodes and link cost as input, and this information is obtained before actually performing any calculation. Link state algorithm is referred to as a centralized algorithm since it is aware of the cost of each link in the network.
+            <delay>2</delay>
+                    <button>
+                      <text>Learn more about Adaptive Routing algorithm</text>
+                      <postback>Adaptive Routing algorithm</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Routing Algorithm</text>
+                      <postback>Routing Algorithm</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Isolation algorithm</pattern>
+            <template>It is an algorithm that obtains the routing information by using local information rather than gathering information from other nodes.
+                        <delay>2</delay>
+                    <button>
+                      <text>Learn more about Adaptive Routing algorithm</text>
+                      <postback>Adaptive Routing algorithm</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Routing Algorithm</text>
+                      <postback>Routing Algorithm</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Distributed algorithm</pattern>
+            <template>It is also known as decentralized algorithm as it computes the least-cost path between source and destination in an iterative and distributed manner. In the decentralized algorithm, no node has the knowledge about the cost of all the network links. In the beginning, a node contains the information only about its own directly attached links and through an iterative process of calculation computes the least-cost path to the destination. A Distance vector algorithm is a decentralized algorithm as it never knows the complete path from source to the destination, instead it knows the direction through which the packet is to be forwarded along with the least cost path.
+                        <delay>2</delay>
+                    <button>
+                      <text>Learn more about Adaptive Routing algorithm</text>
+                      <postback>Adaptive Routing algorithm</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Routing Algorithm</text>
+                      <postback>Routing Algorithm</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Nonadaptive Routing algorithm</pattern>
+            <template>What do you want to learn from Non-Adaptive Routing algorithm?
+                <button>
+                    <text>Flooding</text>
+                    <postback>Flooding</postback>
+                </button>
+                <button>
+                    <text>Random walks</text>
+                    <postback>Random walks</postback>
+                </button>
+                                <button>
+                    <text>Back</text>
+                    <postback>Routing Algorithm</postback>
+                </button>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Flooding</pattern>
+            <template>In case of flooding, every incoming packet is sent to all the outgoing links except the one from it has been reached. The disadvantage of flooding is that node may contain several copies of a particular packet.
+                        <delay>2</delay>
+                    <button>
+                      <text>Learn more about Non-adaptive Routing algorithm</text>
+                      <postback>Nonadaptive Routing algorithm</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Routing Algorithm</text>
+                      <postback>Routing Algorithm</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Random walks</pattern>
+            <template>In case of random walks, a packet sent by the node to one of its neighbors randomly. An advantage of using random walks is that it uses the alternative routes very efficiently.
+                                    <delay>2</delay>
+                    <button>
+                      <text>Learn more about Non-adaptive Routing algorithm</text>
+                      <postback>Nonadaptive Routing algorithm</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Routing Algorithm</text>
+                      <postback>Routing Algorithm</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Link State Routing</pattern>
+            <template>What do you want to learn from Link State Routing?
+                <button>
+                    <text>Knowledge about the neighborhood</text>
+                    <postback>Knowledge about the neighborhood</postback>
+                </button>
+                <button>
+                    <text>Link State Flooding</text>
+                    <postback>Link State Flooding</postback>
+                </button>
+                <button>
+                    <text>Information sharing</text>
+                    <postback>Information sharing</postback>
+                </button>
+                                <button>
+                    <text>Back</text>
+                    <postback>Routing Algorithm</postback>
+                </button>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>Knowledge about the neighborhood</pattern>
+            <template>Instead of sending its routing table, a router sends the information about its neighborhood only. A router broadcast its identities and cost of the directly attached links to other routers.
+                                    <delay>2</delay>
+                    <button>
+                      <text>Learn more about Link State Routing</text>
+                      <postback>Link State Routing</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Routing Algorithm</text>
+                      <postback>Routing Algorithm</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Link State Flooding</pattern>
+            <template>Each router sends the information to every other router on the internetwork except its neighbors. This process is known as Flooding. Every router that receives the packet sends the copies to all its neighbors. Finally, each and every router receives a copy of the same information.
+                                                <delay>2</delay>
+                    <button>
+                      <text>Learn more about Link State Routing</text>
+                      <postback>Link State Routing</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Routing Algorithm</text>
+                      <postback>Routing Algorithm</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        <category>
+            <pattern>Information sharing</pattern>
+            <template>A router sends the information to every other router only when the change occurs in the information.
+                                                <delay>2</delay>
+                    <button>
+                      <text>Learn more about Link State Routing</text>
+                      <postback>Link State Routing</postback>
+                  </button>
+                  <button>
+                      <text>Learn more about Routing Algorithm</text>
+                      <postback>Routing Algorithm</postback>
+                  </button>
+                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+            </template>
+        </category>
+        
+    </topic>
+</aiml>

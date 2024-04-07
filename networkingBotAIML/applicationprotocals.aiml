@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	    <topic name="applicationProtocols">
+        
+        <category>
+            <pattern>learn</pattern>
+            <template>you can learn about this things of Application Protocols:
+            <ul>
+                <li>How big Application Protocols is</li>
+                <li>The most important thing to learn of Application Protocols</li>
+                <li>What this Application Protocols about</li>
+            </ul>
+            Choose!
+            <learn>
+                <category>
+                    <pattern>How big Application Protocols is</pattern>
+                    <template>It has 6 things</template>
+                </category>
+                <category>
+                    <pattern>The most important thing to learn of Application Protocols</pattern>
+                    <template>DNS</template>
+                </category>
+                <category>
+                    <pattern>What this Application Protocols about</pattern>
+                    <template>An application layer protocol defines how the application processes running on different systems, pass the messages to each other
+                    </template>
+                </category>
+            </learn>   
+            </template>
+        </category>
+        
+                    <category>
+                <pattern>Application Protocols</pattern>
+                <template>
+                <get name="username"></get>, what subcategory of Application Protocols do you want?
+                <button>
+                    <text>DNS</text>
+                    <postback>DNS</postback>
+                </button>
+                <button>
+                    <text>FTP</text>
+                    <postback>FTP</postback>
+                </button>
+                <button>
+                    <text>Telnet</text>
+                    <postback>Telnet</postback>
+                </button>
+                <button>
+                    <text>SMTP</text>
+                    <postback>SMTP</postback>
+                </button>
+                <button>
+                    <text>SNMP</text>
+                    <postback>SNMP</postback>
+                </button>
+                <button>
+                    <text>HTTP</text>
+                    <postback>HTTP</postback>
+                </button>
+                <button>
+                    <text>Try new category of networking</text>
+                    <postback>newnet</postback>
+                </button>
+                </template>
+            </category>
+            
+                    <category>
+            <pattern>^ <set>reset</set> ^</pattern>
+            <template>
+                <think><set name="topic">*</set></think>
+                Start a new chat with a "hello".
+            </template>
+        </category>
+        
+        <category>
+            <pattern>newnet</pattern>
+            <template>
+                <think><set name="topic">intro</set></think>
+                Lets try a new category!
+                <button>
+                    <text>Computer Network</text>
+                    <postback>Computer Network</postback>
+                </button>
+                <button>
+                    <text>Models</text>
+                    <postback>Models</postback>
+                </button>
+                <button>
+                    <text>Data Link layer</text>
+                    <postback>Data Link layer</postback>
+                </button>
+                <button>
+                    <text>Network Layer</text>
+                    <postback>Network Layer</postback>
+                </button>
+                <button>
+                    <text>Routing Algorithm</text>
+                    <postback>Routing Algorithm</postback>
+                </button>
+                <button>
+                    <text>Transport Layer</text>
+                    <postback>Transport Layer</postback>
+                </button>
+                <button>
+                    <text>Application Layer</text>
+                    <postback>Application Layer</postback>
+                </button>
+                <button>
+                    <text>Application Protocols</text>
+                    <postback>Application Protocols</postback>
+                </button>
+                <button>
+                    <text>Computer Network Security</text>
+                    <postback>Computer Network Security</postback>
+                </button>
+            </template>
+        </category>
+        
+    <category>
+        <pattern>^ <set>changecat</set> ^</pattern>
+        <template><srai>newnet</srai></template>
+    </category>
+        
+        <category>
+            <pattern>DNS</pattern>
+            <template>DNS stands for Domain Name System.
+DNS is a directory service that provides a mapping between the name of a host on the network and its numerical address.
+DNS is required for the functioning of the internet.
+Each node in a tree has a domain name, and a full domain name is a sequence of symbols specified by dots.
+DNS is a service that translates the domain name into IP addresses. This allows the users of networks to utilize user-friendly names when looking for other hosts instead of remembering the IP addresses.
+For example, suppose the FTP site at EduSoft had an IP address of 132.147.165.50, most people would reach this site by specifying ftp.EduSoft.com. Therefore, the domain name is more reliable than IP address.
+                  <delay>2</delay>
+                  <button>
+                      <text>Learn more about Application Protocols</text>
+                      <postback>Application Protocols</postback>
+                  </button>
+                                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        <category>
+            <pattern>FTP</pattern>
+            <template>FTP stands for File transfer protocol.
+FTP is a standard internet protocol provided by TCP/IP used for transmitting the files from one host to another.
+It is mainly used for transferring the web page files from their creator to the computer that acts as a server for other computers on the internet.
+It is also used for downloading the files to computer from other servers.
+                  <delay>2</delay>
+                  <button>
+                      <text>Learn more about Application Protocols</text>
+                      <postback>Application Protocols</postback>
+                  </button>
+                                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        <category>
+            <pattern>Telnet</pattern>
+            <template>The main task of the internet is to provide services to users. For example, users want to run different application programs at the remote site and transfers a result to the local site. This requires a client-server program such as FTP, SMTP. But this would not allow us to create a specific program for each demand.
+The better solution is to provide a general client-server program that lets the user access any application program on a remote computer. Therefore, a program that allows a user to log on to a remote computer. A popular client-server program Telnet is used to meet such demands. Telnet is an abbreviation for Terminal Network.
+Telnet provides a connection to the remote computer in such a way that a local terminal appears to be at the remote side.
+                  <delay>2</delay>
+                  <button>
+                      <text>Learn more about Application Protocols</text>
+                      <postback>Application Protocols</postback>
+                  </button>
+                                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        <category>
+            <pattern>SMTP</pattern>
+            <template>SMTP stands for Simple Mail Transfer Protocol.
+SMTP is a set of communication guidelines that allow software to transmit an electronic mail over the internet is called Simple Mail Transfer Protocol.
+It is a program used for sending messages to other computer users based on e-mail addresses.
+It provides a mail exchange between users on the same or different computers, and it also supports:
+It can send a single message to one or more recipients.
+Sending message can include text, voice, video or graphics.
+It can also send the messages on networks outside the internet.
+The main purpose of SMTP is used to set up communication rules between servers. The servers have a way of identifying themselves and announcing what kind of communication they are trying to perform. They also have a way of handling the errors such as incorrect email address. For example, if the recipient address is wrong, then receiving server reply with an error message of some kind.
+                  <delay>2</delay>
+                  <button>
+                      <text>Learn more about Application Protocols</text>
+                      <postback>Application Protocols</postback>
+                  </button>
+                                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        <category>
+            <pattern>SNMP</pattern>
+            <template>SNMP stands for Simple Network Management Protocol.
+SNMP is a framework used for managing devices on the internet.
+It provides a set of operations for monitoring and managing the internet.
+                  <delay>2</delay>
+                  <button>
+                      <text>Learn more about Application Protocols</text>
+                      <postback>Application Protocols</postback>
+                  </button>
+                                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        <category>
+            <pattern>HTTP</pattern>
+            <template>HTTP stands for HyperText Transfer Protocol.
+It is a protocol used to access the data on the World Wide Web (www).
+The HTTP protocol can be used to transfer the data in the form of plain text, hypertext, audio, video, and so on.
+This protocol is known as HyperText Transfer Protocol because of its efficiency that allows us to use in a hypertext environment where there are rapid jumps from one document to another document.
+HTTP is similar to the FTP as it also transfers the files from one host to another host. But, HTTP is simpler than FTP as HTTP uses only one connection, i.e., no control connection to transfer the files.
+HTTP is used to carry the data in the form of MIME-like format.
+HTTP is similar to SMTP as the data is transferred between client and server. The HTTP differs from the SMTP in the way the messages are sent from the client to the server and from server to the client. SMTP messages are stored and forwarded while HTTP messages are delivered immediately.
+                  <delay>2</delay>
+                  <button>
+                      <text>Learn more about Application Protocols</text>
+                      <postback>Application Protocols</postback>
+                  </button>
+                                    <button>
+                      <text>Learn more about Networking</text>
+                      <postback>newnet</postback>
+                  </button>
+</template>
+        </category>
+        
+    </topic>
+</aiml>

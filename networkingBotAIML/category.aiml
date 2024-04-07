@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+  
+  
+  <topic name="intro">
+
+        
+        
+        
+        <category>
+            <pattern>*</pattern>
+            <template>
+                <set name="username"><star/></set>, i'm a bot that will teach you all about networking basics.<br/>
+                There are 9 categotries to learn about networking in general.
+                Do you want to learn from out website or from myseft?
+                
+                <button>
+                    <text>From the website</text>
+                    <postback>da</postback>
+                </button>
+                <button>
+                    <text>From the bot</text>
+                    <postback>nu</postback>
+                </button>
+                
+            </template>
+        </category>
+        
+        
+        <category>
+            <pattern>da</pattern>
+            <template>
+                <think><set name = "state">ready</set></think>
+            <srai>chooseCat</srai>
+            </template>
+        </category>
+        
+        <category>
+            <pattern>nu</pattern>
+            <template>
+                <think><set name = "state">unready</set></think>
+            <srai>chooseCat</srai>
+            </template>
+        </category>
+        
+        
+        <category>
+            <pattern>chooseCat</pattern>
+            <template> 
+            
+            <condition name = "state" value = "unready">
+            Which category do you want to start with?
+                <button>
+                    <text>Computer Network</text>
+                    <postback>Computer Network</postback>
+                </button>
+                <button>
+                    <text>Models</text>
+                    <postback>Models</postback>
+                </button>
+                <button>
+                    <text>Data Link layer</text>
+                    <postback>Data Link layer</postback>
+                </button>
+                <button>
+                    <text>Network Layer</text>
+                    <postback>Network Layer</postback>
+                </button>
+                <button>
+                    <text>Routing Algorithm</text>
+                    <postback>Routing Algorithm</postback>
+                </button>
+                <button>
+                    <text>Transport Layer</text>
+                    <postback>Transport Layer</postback>
+                </button>
+                <button>
+                    <text>Application Layer</text>
+                    <postback>Application Layer</postback>
+                </button>
+                <button>
+                    <text>Application Protocols</text>
+                    <postback>Application Protocols</postback>
+                </button>
+                <button>
+                    <text>Computer Network Security</text>
+                    <postback>Computer Network Security</postback>
+                </button>
+                </condition>
+                
+                <condition name = "state" value = "ready">
+                    <button>
+                        <text>Go to the website</text>
+                        <url>https://www.javatpoint.com/computer-network-tutorial</url>
+                    </button>
+                    <think><set name = "state">unready</set></think>
+                    <button>
+                        <text>Now learn from the bot!</text>
+                        <postback>chooseCat</postback>
+                    </button>
+            </condition>
+                
+            </template>
+        </category>
+        
+            
+            
+            <category>
+                <pattern>Computer Network</pattern>
+                <template>
+                    <think><set name="topic">computerNetwork</set></think>
+                    <get name="username"></get>, what subcategory of computer network do you want?
+                <button>
+                    <text>Features</text>
+                    <postback>Features</postback>
+                </button>
+                <button>
+                    <text>Architecture</text>
+                    <postback>Architecture</postback>
+                </button>
+                <button>
+                    <text>Components</text>
+                    <postback>Components</postback>
+                </button>
+                <button>
+                    <text>Computer Network Types</text>
+                    <postback>Computer Network Types</postback>
+                </button>
+                <button>
+                    <text>Topologies</text>
+                    <postback>Topologies</postback>
+                </button>
+                <button>
+                    <text>Transmission Modes</text>
+                    <postback>Transmission Modes</postback>
+                </button>
+                <button>
+                    <text>Try new category of networking</text>
+                    <postback>newnet</postback>
+                </button>
+                </template>
+            </category>
+        
+        
+            <category>
+                <pattern>Models</pattern>
+                <template><think><set name="topic">models</set></think>
+                <get name="username"></get>, what subcategory of models do you want?
+                <button>
+                    <text>OSI Model</text>
+                    <postback>OSI Model</postback>
+                </button>
+                <button>
+                    <text>TCPIP Model</text>
+                    <postback>TCPIP Model</postback>
+                </button>
+                <button>
+                    <text>Try new category of networking</text>
+                    <postback>newnet</postback>
+                </button>
+                </template>
+            </category>
+                        
+                        
+            <category>
+                <pattern>Data Link layer</pattern>
+                <template><think><set name="topic">dataLinkLayer</set></think>
+                <get name="username"></get>, what subcategory of models do you want?
+                <button>
+                    <text>Framing and Link access</text>
+                    <postback>Framing and Link access</postback>
+                </button>
+                <button>
+                    <text>Reliable delivery</text>
+                    <postback>Reliable delivery</postback>
+                </button>
+                <button>
+                    <text>Flow control</text>
+                    <postback>Flow control</postback>
+                </button>
+                <button>
+                    <text>Error Detection</text>
+                    <postback>Error Detection</postback>
+                </button>
+                <button>
+                    <text>Error Correction</text>
+                    <postback>Error Correction</postback>
+                </button>
+                <button>
+                    <text>Half-Duplex and Full-Duplex</text>
+                    <postback>HalfDuplex  FullDuplex</postback>
+                </button>
+                <button>
+                    <text>Try new category of networking</text>
+                    <postback>newnet</postback>
+                </button>
+                </template>
+            </category>
+                      
+                        
+            <category>
+                <pattern>Network Layer</pattern>
+                <template><think><set name="topic">networkLayer</set></think>
+                <get name="username"></get>, what subcategory of Network Layer do you want?
+                <button>
+                    <text>Network Addressing</text>
+                    <postback>Network Addressing</postback>
+                </button>
+                <button>
+                    <text>Routing</text>
+                    <postback>Routing</postback>
+                </button>
+                <button>
+                    <text>Network Layer Protocols</text>
+                    <postback>Network Layer Protocols</postback>
+                </button>
+                <button>
+                    <text>Try new category of networking</text>
+                    <postback>newnet</postback>
+                </button>
+                </template>
+            </category>
+                     
+                        
+            <category>
+                <pattern>Routing Algorithm</pattern>
+                <template><think><set name="topic">routingAlgorithm</set></think>
+                <get name="username"></get>, what subcategory of Routing Algorithm do you want?
+                <button>
+                    <text>Adaptive Routing algorithm</text>
+                    <postback>Adaptive Routing algorithm</postback>
+                </button>
+                <button>
+                    <text>Non-adaptive Routing algorithm</text>
+                    <postback>Nonadaptive Routing algorithm</postback>
+                </button>
+                <button>
+                    <text>Link State Routing</text>
+                    <postback>Link State Routing</postback>
+                </button>
+                <button>
+                    <text>Try new category of networking</text>
+                    <postback>newnet</postback>
+                </button>
+                </template>
+            </category>
+                       
+                        
+            <category>
+                <pattern>Transport Layer</pattern>
+                <template><think><set name="topic">transportLayer</set></think>
+                <get name="username"></get>, what subcategory of Transport Layer do you want?
+                <button>
+                    <text>End-to-end delivery</text>
+                    <postback>Endtoend delivery</postback>
+                </button>
+                <button>
+                    <text>Addressing</text>
+                    <postback>Addressing</postback>
+                </button>
+                <button>
+                    <text>Reliable delivery</text>
+                    <postback>Reliable delivery</postback>
+                </button>
+                <button>
+                    <text>Multiplexing</text>
+                    <postback>Multiplexing</postback>
+                </button>
+                <button>
+                    <text>Try new category of networking</text>
+                    <postback>newnet</postback>
+                </button>
+                </template>
+            </category>
+                       
+                        
+            <category>
+                <pattern>Application Layer</pattern>
+                <template><think><set name="topic">applicationLayer</set></think>
+                <get name="username"></get>, what subcategory of Application Layer do you want?
+                <button>
+                    <text>Services of Application Layers</text>
+                    <postback>Services of Application Layers</postback>
+                </button>
+                <button>
+                    <text>Client and Server Model</text>
+                    <postback>Client and Server Model</postback>
+                </button>
+                <button>
+                    <text>Try new category of networking</text>
+                    <postback>newnet</postback>
+                </button>
+                </template>
+            </category>
+                      
+                        
+            <category>
+                <pattern>Application Protocols</pattern>
+                <template><think><set name="topic">applicationProtocols</set></think>
+                <get name="username"></get>, what subcategory of Application Protocols do you want?
+                <button>
+                    <text>DNS</text>
+                    <postback>DNS</postback>
+                </button>
+                <button>
+                    <text>FTP</text>
+                    <postback>FTP</postback>
+                </button>
+                <button>
+                    <text>Telnet</text>
+                    <postback>Telnet</postback>
+                </button>
+                <button>
+                    <text>SMTP</text>
+                    <postback>SMTP</postback>
+                </button>
+                <button>
+                    <text>SNMP</text>
+                    <postback>SNMP</postback>
+                </button>
+                <button>
+                    <text>HTTP</text>
+                    <postback>HTTP</postback>
+                </button>
+                <button>
+                    <text>Try new category of networking</text>
+                    <postback>newnet</postback>
+                </button>
+                </template>
+            </category>
+                      
+                        
+            <category>
+                <pattern>Computer Network Security</pattern>
+                <template><think><set name="topic">computerNetworkSecurity</set></think>
+                <get name="username"></get>, what subcategory of Computer Network Security do you want?
+                <button>
+                    <text>Security</text>
+                    <postback>Security</postback>
+                </button>
+                <button>
+                    <text>Privacy</text>
+                    <postback>Privacy</postback>
+                </button>
+                <button>
+                    <text>Digital Signature</text>
+                    <postback>Digital Signature</postback>
+                </button>
+                <button>
+                    <text>Try new category of networking</text>
+                    <postback>newnet</postback>
+                </button>
+                </template>
+            </category>
+          
+
+    </topic>
+  
+  
+</aiml>
